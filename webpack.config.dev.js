@@ -6,6 +6,7 @@ module.exports = {
   entry: {
     index: "./src/ts/index.ts",
     earth: "./src/ts/earth.ts",
+    data: "./src/ts/data.ts",
   },
   output: {
     path: path.join(__dirname, "dist"),
@@ -36,6 +37,11 @@ module.exports = {
         test: /\.html?$/,
         use: [{ loader: "html-loader" }],
       },
+      {
+        test: /\.json?$/,
+        type: "javascript/auto",
+        use: [{ loader: "json-loader" }],
+      },
     ],
   },
 
@@ -58,6 +64,12 @@ module.exports = {
       template: "./src/html/threePages.html",
       inject: "head",
       chunks: ["earth"],
+    }),
+    new HtmlWebpackPlugin({
+      filename: "data.html",
+      template: "./src/html/data.html",
+      inject: "head",
+      chunks: ["data"],
     }),
   ],
 };
