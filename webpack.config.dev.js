@@ -5,7 +5,6 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   entry: {
     index: "./src/ts/index.ts",
-    earth: "./src/ts/earth.ts",
     data: "./src/ts/data.ts",
   },
   output: {
@@ -58,12 +57,6 @@ module.exports = {
       template: "./src/html/index.html",
       inject: "head",
       chunks: ["index"],
-    }),
-    new HtmlWebpackPlugin({
-      filename: "earth.html",
-      template: "./src/html/threePages.html",
-      inject: "head",
-      chunks: ["earth"],
     }),
     new HtmlWebpackPlugin({
       filename: "data.html",
