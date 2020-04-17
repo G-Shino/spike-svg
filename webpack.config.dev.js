@@ -5,7 +5,6 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   entry: {
     index: "./src/ts/index.ts",
-    data: "./src/ts/data.ts",
     textMoveOnPath: "./src/ts/textMoveOnPath.ts",
   },
   output: {
