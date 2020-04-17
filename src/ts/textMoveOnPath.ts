@@ -1,5 +1,5 @@
 import Lottie from "lottie-web";
-import Data from "./../data/data.json";
+import textMoveOnPathJson from "./../data/textMoveOnPath.json";
 
 window.addEventListener("DOMContentLoaded", () => {
   const div = document.createElement("div");
@@ -9,6 +9,6 @@ window.addEventListener("DOMContentLoaded", () => {
     renderer: "svg",
     loop: true,
     autoplay: true,
-    animationData: Data,
+    animationData: textMoveOnPathJson,
   });
 });

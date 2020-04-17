@@ -6,6 +6,7 @@ module.exports = {
   entry: {
     index: "./src/ts/index.ts",
     data: "./src/ts/data.ts",
+    textMoveOnPath: "./src/ts/textMoveOnPath.ts",
   },
   output: {
     path: path.join(__dirname, "dist"),
@@ -64,10 +65,10 @@ module.exports = {
       inject: false,
     }),
     new HtmlWebpackPlugin({
-      filename: "data.html",
-      template: "./src/html/data.html",
+      filename: "textMoveOnPath.html",
+      template: "./src/html/svg.html",
       inject: "head",
-      chunks: ["data"],
+      chunks: ["textMoveOnPath"],
     }),
   ],
 };
