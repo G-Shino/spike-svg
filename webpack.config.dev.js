@@ -6,6 +6,8 @@ module.exports = {
   entry: {
     index: "./src/ts/index.ts",
     textMoveOnPath: "./src/ts/textMoveOnPath.ts",
+    dialogTest: "./src/ts/dialogTest.ts",
+    star: "./src/ts/star.ts",
   },
   output: {
     path: path.join(__dirname, "dist"),
@@ -68,6 +70,18 @@ module.exports = {
       template: "./src/html/svg.html",
       inject: "head",
       chunks: ["textMoveOnPath"],
+    }),
+    new HtmlWebpackPlugin({
+      filename: "dialogTest.html",
+      template: "./src/html/svg.html",
+      inject: "head",
+      chunks: ["dialogTest"],
+    }),
+    new HtmlWebpackPlugin({
+      filename: "star.html",
+      template: "./src/html/svg.html",
+      inject: "head",
+      chunks: ["star"],
     }),
   ],
 };
