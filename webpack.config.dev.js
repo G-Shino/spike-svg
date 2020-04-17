@@ -5,8 +5,8 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   entry: {
     index: "./src/ts/index.ts",
-    earth: "./src/ts/earth.ts",
     data: "./src/ts/data.ts",
+    textMoveOnPath: "./src/ts/textMoveOnPath.ts",
   },
   output: {
     path: path.join(__dirname, "dist"),
@@ -60,16 +60,15 @@ module.exports = {
       chunks: ["index"],
     }),
     new HtmlWebpackPlugin({
-      filename: "earth.html",
-      template: "./src/html/threePages.html",
-      inject: "head",
-      chunks: ["earth"],
+      filename: "demo.html",
+      template: "./src/html/demo.html",
+      inject: false,
     }),
     new HtmlWebpackPlugin({
-      filename: "data.html",
-      template: "./src/html/data.html",
+      filename: "textMoveOnPath.html",
+      template: "./src/html/svg.html",
       inject: "head",
-      chunks: ["data"],
+      chunks: ["textMoveOnPath"],
     }),
   ],
 };
